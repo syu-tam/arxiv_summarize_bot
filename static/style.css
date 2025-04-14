@@ -1,0 +1,257 @@
+.search-section {
+    background-color: #f8f9fa;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.papers-container {
+    margin-top: 2rem;
+}
+
+.paper-card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paper-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.paper-title {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.paper-meta {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.paper-summary {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.paper-link {
+    margin-top: 1rem;
+}
+
+.paper-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#loading {
+    margin: 3rem 0;
+}
+
+.results-count {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.sort-controls {
+    margin-bottom: 1rem;
+}
+
+.sort-controls .btn-group {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.sort-controls .btn {
+    padding: 0.5rem 1rem;
+}
+
+#advancedSearch {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.category-group {
+    margin-bottom: 1rem;
+}
+
+.category-title {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.subcategory-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.form-check-input:checked + .form-check-label {
+    color: #0d6efd;
+    font-weight: 500;
+}
+
+.selected-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.filter-badge {
+    background-color: #e9ecef;
+    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-badge .remove-filter {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.filter-badge .remove-filter:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .paper-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .paper-title {
+        font-size: 1.2rem;
+    }
+}
+
+.watched-keywords-section {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+}
+
+#watchedKeywords {
+    min-height: 2.5rem;
+}
+
+.badge {
+    transition: all 0.2s ease;
+}
+
+.badge:hover {
+    background-color: #e9ecef !important;
+}
+
+.badge button {
+    opacity: 0.6;
+}
+
+.badge:hover button {
+    opacity: 1;
+}
+
+.add-keyword-form {
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+#success {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: fadeInOut 3s ease;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* 日付セクションのスタイル */
+.date-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.date-section h2 {
+    color: #2c3e50;
+}
+
+/* キーワードセクションのスタイル */
+.keyword-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.keyword-section h3 {
+    color: #495057;
+}
+
+.keyword-section .paper-card {
+    background-color: #fff;
+    margin: 1rem 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.keyword-section .paper-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 論文カードのスタイル調整 */
+.keyword-section .paper-card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.2rem;
+}
+
+.keyword-section .paper-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .date-section {
+        padding: 1rem;
+    }
+    
+    .keyword-section {
+        padding: 1rem;
+    }
+    
+    .keyword-section .paper-card {
+        padding: 1rem;
+    }
+}

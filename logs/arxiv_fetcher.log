@@ -1,0 +1,502 @@
+2025-04-13 08:31:59.576 | INFO     | __main__:main:68 - 検索開始: keywords=['vision'], max_results=1, sort_by=submittedDate, mode=AND
+2025-04-13 08:31:59.587 | INFO     | arxiv_fetcher:__init__:17 - ArxivFetcher initialized
+2025-04-13 08:31:59.587 | INFO     | arxiv_fetcher:search_papers:61 - Searching with query: vision, sort_by: submittedDate
+2025-04-13 08:31:59.593 | ERROR    | arxiv_fetcher:search_papers:87 - Error during paper search: SUBMITTEDDATE
+2025-04-13 08:31:59.594 | ERROR    | __main__:main:112 - 予期せぬエラー: SUBMITTEDDATE
+2025-04-13 08:32:44.016 | INFO     | __main__:main:68 - 検索開始: keywords=['vision'], max_results=1, sort_by=LastUpdatedDate, mode=AND
+2025-04-13 08:32:44.033 | INFO     | arxiv_fetcher:__init__:17 - ArxivFetcher initialized
+2025-04-13 08:32:44.034 | INFO     | arxiv_fetcher:search_papers:61 - Searching with query: vision, sort_by: LastUpdatedDate
+2025-04-13 08:32:44.035 | ERROR    | arxiv_fetcher:search_papers:87 - Error during paper search: LASTUPDATEDDATE
+2025-04-13 08:32:44.036 | ERROR    | __main__:main:112 - 予期せぬエラー: LASTUPDATEDDATE
+2025-04-13 08:33:59.995 | INFO     | __main__:main:68 - 検索開始: keywords=['vision'], max_results=1, sort_by=submittedDate, mode=AND
+2025-04-13 08:33:59.995 | INFO     | arxiv_fetcher:__init__:17 - ArxivFetcher initialized
+2025-04-13 08:33:59.995 | INFO     | arxiv_fetcher:search_papers:61 - Searching with query: vision, sort_by: submittedDate
+2025-04-13 08:33:59.995 | ERROR    | arxiv_fetcher:search_papers:90 - Error during paper search: 'str' object has no attribute 'value'
+2025-04-13 08:33:59.995 | ERROR    | __main__:main:112 - 予期せぬエラー: 'str' object has no attribute 'value'
+2025-04-13 08:46:24.206 | INFO     | src.arxiv_fetcher:search_papers:41 - Found 5 papers for query: deep learning
+2025-04-13 08:51:19.410 | INFO     | src.arxiv_fetcher:search_papers:41 - Found 5 papers for query: deep learning
+2025-04-13 08:51:41.749 | INFO     | src.arxiv_fetcher:search_papers:41 - Found 5 papers for query: distillation
+2025-04-13 08:52:44.086 | INFO     | src.arxiv_fetcher:search_papers:41 - Found 0 papers for query: distillatin
+2025-04-13 08:53:32.954 | INFO     | src.arxiv_fetcher:search_papers:41 - Found 0 papers for query: distillatin
+2025-04-13 08:53:43.234 | INFO     | src.arxiv_fetcher:search_papers:41 - Found 5 papers for query: distillation
+2025-04-13 08:53:51.061 | INFO     | src.arxiv_fetcher:search_papers:41 - Found 5 papers for query: distillation
+2025-04-13 08:53:56.890 | INFO     | src.arxiv_fetcher:search_papers:41 - Found 5 papers for query: distillation
+2025-04-13 08:58:34.532 | INFO     | src.arxiv_fetcher:search_papers:79 - Found 5 papers for query: (distillation) AND (cat:stat.ML)
+2025-04-13 08:58:38.130 | INFO     | src.arxiv_fetcher:search_papers:79 - Found 5 papers for query: (distillation) AND (cat:stat.ML)
+2025-04-13 08:58:44.665 | INFO     | src.arxiv_fetcher:search_papers:79 - Found 10 papers for query: (distillation) AND (cat:stat.ML)
+2025-04-13 09:00:56.347 | INFO     | src.arxiv_fetcher:search_papers:82 - Found 5 papers for query: distillation
+2025-04-13 09:07:32.428 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 0 papers for query: distillation
+2025-04-13 09:17:25.000 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-13 09:17:51.444 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-13 09:27:04.051 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-13 09:27:10.826 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: distillation
+2025-04-13 09:27:16.270 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-13 09:28:28.728 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-13 09:28:34.901 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: distillation
+2025-04-13 09:28:42.326 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: SoTA with Less: MCTS-Guided Sample Selection for Data-Efficient Visual Reasoning Self-Improvement
+2025-04-13 09:28:45.572 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: The Efficacy of Semantics-Preserving Transformations in Self-Supervised Learning for Medical Ultrasound
+2025-04-13 09:28:50.486 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Go Figure: Transparency in neuroscience images preserves context and clarifies interpretation
+2025-04-13 09:28:53.770 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: SlimSpeech: Lightweight and Efficient Text-to-Speech with Slim Rectified Flow
+2025-04-13 09:28:59.393 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Distilling Knowledge from Heterogeneous Architectures for Semantic Segmentation
+2025-04-13 09:29:42.036 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: distillation, object detection
+2025-04-13 09:29:47.112 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: C3PO: Critical-Layer, Core-Expert, Collaborative Pathway Optimization for Test-Time Expert Re-Mixing
+2025-04-13 09:29:50.797 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: GLUS: Global-Local Reasoning Unified into A Single Large Language Model for Video Segmentation
+2025-04-13 09:29:55.408 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: VisualCloze: A Universal Image Generation Framework via Visual In-Context Learning
+2025-04-13 09:30:00.526 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Detect Anything 3D in the Wild
+2025-04-13 09:30:06.627 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: BoxDreamer: Dreaming Box Corners for Generalizable Object Pose Estimation
+2025-04-13 09:30:07.416 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: distillation, object detection
+2025-04-13 09:30:07.416 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: C3PO: Critical-Layer, Core-Expert, Collaborative Pathway Optimization for Test-Time Expert Re-Mixing
+2025-04-13 09:30:07.416 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: GLUS: Global-Local Reasoning Unified into A Single Large Language Model for Video Segmentation
+2025-04-13 09:30:07.416 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: VisualCloze: A Universal Image Generation Framework via Visual In-Context Learning
+2025-04-13 09:30:07.416 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Detect Anything 3D in the Wild
+2025-04-13 09:30:07.432 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: BoxDreamer: Dreaming Box Corners for Generalizable Object Pose Estimation
+2025-04-13 09:30:34.988 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 11:48:16.600 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 11:49:44.892 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: cat:cs.AI
+2025-04-14 11:49:51.755 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: VCR-Bench: A Comprehensive Evaluation Framework for Video Chain-of-Thought Reasoning
+2025-04-14 11:49:54.400 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: GenEAva: Generating Cartoon Avatars with Fine-Grained Facial Expressions from Realistic Diffusion-based Faces
+2025-04-14 11:50:00.559 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: We Are All Creators: Generative AI, Collective Knowledge, and the Path Towards Human-AI Synergy
+2025-04-14 11:50:03.610 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Note on the identification of total effect in Cluster-DAGs with cycles
+2025-04-14 11:50:09.756 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: The Urban Impact of AI: Modeling Feedback Loops in Next-Venue Recommendation
+2025-04-14 12:15:53.513 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:16:05.015 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:16:09.947 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: distillation
+2025-04-14 12:16:09.947 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: SoTA with Less: MCTS-Guided Sample Selection for Data-Efficient Visual Reasoning Self-Improvement
+2025-04-14 12:16:09.950 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: The Efficacy of Semantics-Preserving Transformations in Self-Supervised Learning for Medical Ultrasound
+2025-04-14 12:16:09.955 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Go Figure: Transparency in neuroscience images preserves context and clarifies interpretation
+2025-04-14 12:16:09.957 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: SlimSpeech: Lightweight and Efficient Text-to-Speech with Slim Rectified Flow
+2025-04-14 12:16:09.961 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Distilling Knowledge from Heterogeneous Architectures for Semantic Segmentation
+2025-04-14 12:16:21.702 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:17:11.233 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:17:16.384 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: distillation
+2025-04-14 12:17:16.387 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: SoTA with Less: MCTS-Guided Sample Selection for Data-Efficient Visual Reasoning Self-Improvement
+2025-04-14 12:17:16.389 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: The Efficacy of Semantics-Preserving Transformations in Self-Supervised Learning for Medical Ultrasound
+2025-04-14 12:17:16.391 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Go Figure: Transparency in neuroscience images preserves context and clarifies interpretation
+2025-04-14 12:17:16.393 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: SlimSpeech: Lightweight and Efficient Text-to-Speech with Slim Rectified Flow
+2025-04-14 12:17:16.396 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Distilling Knowledge from Heterogeneous Architectures for Semantic Segmentation
+2025-04-14 12:17:26.021 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: computer
+2025-04-14 12:17:26.025 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: C3PO: Critical-Layer, Core-Expert, Collaborative Pathway Optimization for Test-Time Expert Re-Mixing
+2025-04-14 12:17:26.027 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: GLUS: Global-Local Reasoning Unified into A Single Large Language Model for Video Segmentation
+2025-04-14 12:17:41.243 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: hello
+2025-04-14 12:17:44.993 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: hello
+2025-04-14 12:21:55.485 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:22:03.786 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:32:52.231 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:35:21.909 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:35:25.323 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:38:13.502 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:38:19.980 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:38:26.344 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: deep learning
+2025-04-14 12:38:30.189 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 5 papers for query: deep learning
+2025-04-14 12:38:38.035 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 0 papers for query: distillation
+2025-04-14 12:38:43.354 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 0 papers for query: deep learning
+2025-04-14 12:40:22.362 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:40:28.751 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:40:42.940 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:40:44.699 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 0 papers for query: distillation
+2025-04-14 12:40:50.287 | INFO     | src.arxiv_fetcher:search_papers:168 - Found 0 papers for query: deep learning
+2025-04-14 12:40:55.413 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:40:59.754 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:43:12.021 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:43:20.010 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:43:25.462 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:43:29.093 | INFO     | src.arxiv_fetcher:check_new_papers:93 - Checking papers since: 2025-04-14T03:40:50.295966+00:00
+2025-04-14 12:43:29.093 | INFO     | src.arxiv_fetcher:check_new_papers:104 - Searching with query: distillation
+2025-04-14 12:43:32.444 | INFO     | src.arxiv_fetcher:check_new_papers:104 - Searching with query: deep learning
+2025-04-14 12:43:38.006 | INFO     | src.arxiv_fetcher:check_new_papers:139 - Found 0 new papers in total
+2025-04-14 12:44:00.628 | INFO     | src.arxiv_fetcher:check_new_papers:93 - Checking papers since: 2025-04-14T03:43:38.006185+00:00
+2025-04-14 12:44:00.630 | INFO     | src.arxiv_fetcher:check_new_papers:104 - Searching with query: distillation
+2025-04-14 12:44:03.948 | INFO     | src.arxiv_fetcher:check_new_papers:104 - Searching with query: deep learning
+2025-04-14 12:44:09.175 | INFO     | src.arxiv_fetcher:check_new_papers:139 - Found 0 new papers in total
+2025-04-14 12:44:20.766 | INFO     | src.arxiv_fetcher:check_new_papers:93 - Checking papers since: 2025-04-14T03:44:09.175285+00:00
+2025-04-14 12:44:20.770 | INFO     | src.arxiv_fetcher:check_new_papers:104 - Searching with query: distillation
+2025-04-14 12:44:22.967 | INFO     | src.arxiv_fetcher:check_new_papers:104 - Searching with query: deep learning
+2025-04-14 12:44:28.273 | INFO     | src.arxiv_fetcher:check_new_papers:139 - Found 0 new papers in total
+2025-04-14 12:45:40.122 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:45:45.129 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:45:57.691 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:46:03.185 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:46:26.164 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T03:44:28.273219+00:00
+2025-04-14 12:46:26.166 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: distillation
+2025-04-14 12:46:27.163 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:46:29.035 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: deep learning
+2025-04-14 12:46:34.440 | INFO     | src.arxiv_fetcher:check_new_papers:141 - Found 0 new papers in total
+2025-04-14 12:48:06.025 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:48:12.764 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:48:55.665 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:48:59.610 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:49:57.214 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:50:07.564 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:50:09.583 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T03:46:34.438214+00:00
+2025-04-14 12:50:09.586 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (distillation) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 12:50:11.861 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (deep learning) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 12:50:17.733 | INFO     | src.arxiv_fetcher:check_new_papers:141 - Found 0 new papers in total
+2025-04-14 12:52:33.524 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:52:36.675 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T03:50:17.731677+00:00
+2025-04-14 12:52:36.678 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (distillation) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 12:52:39.496 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (deep learning) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 12:52:45.166 | INFO     | src.arxiv_fetcher:check_new_papers:141 - Found 0 new papers in total
+2025-04-14 12:53:51.332 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:53:54.832 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:54:04.920 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T03:52:45.166570+00:00
+2025-04-14 12:54:04.920 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (distillation) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 12:54:07.487 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (deep learning) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 12:54:12.910 | INFO     | src.arxiv_fetcher:check_new_papers:141 - Found 0 new papers in total
+2025-04-14 12:54:24.156 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T03:54:12.910335+00:00
+2025-04-14 12:54:24.162 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (distillation) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 12:54:26.417 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (deep learning) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 12:54:32.041 | INFO     | src.arxiv_fetcher:check_new_papers:141 - Found 0 new papers in total
+2025-04-14 12:55:52.075 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:55:58.576 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:57:25.600 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 12:57:34.542 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 12:57:37.435 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T03:54:32.035919+00:00
+2025-04-14 12:57:37.440 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (distillation) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 12:57:39.792 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (deep learning) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 12:57:45.017 | INFO     | src.arxiv_fetcher:check_new_papers:141 - Found 0 new papers in total
+2025-04-14 13:00:12.749 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:00:16.445 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:00:26.143 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T03:57:45.014650+00:00
+2025-04-14 13:00:26.145 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (distillation) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 13:00:41.972 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (deep learning) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 13:00:52.917 | INFO     | src.arxiv_fetcher:check_new_papers:141 - Found 0 new papers in total
+2025-04-14 13:04:12.603 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:04:18.024 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:05:25.882 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:05:34.807 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:05:48.561 | INFO     | src.arxiv_fetcher:search_papers:180 - Executing search with query: distillation
+2025-04-14 13:05:49.587 | INFO     | src.arxiv_fetcher:search_papers:206 - Found 5 papers for query: distillation
+2025-04-14 13:05:50.054 | ERROR    | src.paper_summarizer:summarize:77 - Error generating summary: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-04-14 13:05:50.054 | ERROR    | src.main:search_and_summarize:85 - 要約生成エラー: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-04-14 13:05:50.216 | ERROR    | src.paper_summarizer:summarize:77 - Error generating summary: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-04-14 13:05:50.216 | ERROR    | src.main:search_and_summarize:85 - 要約生成エラー: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-04-14 13:05:50.426 | ERROR    | src.paper_summarizer:summarize:77 - Error generating summary: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-04-14 13:05:50.427 | ERROR    | src.main:search_and_summarize:85 - 要約生成エラー: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-04-14 13:05:50.597 | ERROR    | src.paper_summarizer:summarize:77 - Error generating summary: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-04-14 13:05:50.602 | ERROR    | src.main:search_and_summarize:85 - 要約生成エラー: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-04-14 13:05:50.841 | ERROR    | src.paper_summarizer:summarize:77 - Error generating summary: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-04-14 13:05:50.852 | ERROR    | src.main:search_and_summarize:85 - 要約生成エラー: Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_api*****here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-04-14 13:06:45.051 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:06:50.511 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:07:04.604 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:07:16.451 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:08:38.006 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:08:44.757 | INFO     | src.arxiv_fetcher:search_papers:180 - Executing search with query: distillation
+2025-04-14 13:08:45.466 | INFO     | src.arxiv_fetcher:search_papers:206 - Found 5 papers for query: distillation
+2025-04-14 13:08:50.104 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 13:08:55.105 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Proxy-Anchor and EVT-Driven Continual Learning Method for Generalized Category Discovery
+2025-04-14 13:09:00.382 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Embodied Image Captioning: Self-supervised Learning Agents for Spatially Coherent Image Descriptions
+2025-04-14 13:09:06.614 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Towards Unified Music Emotion Recognition across Dimensional and Categorical Models
+2025-04-14 13:09:12.316 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Muon-Accelerated Attention Distillation for Real-Time Edge Synthesis via Optimized Latent Diffusion
+2025-04-14 13:13:30.497 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:13:38.052 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:16:13.276 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:16:17.638 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:17:28.224 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:17:32.651 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:17:53.224 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:18:01.740 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:18:04.822 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T04:00:52.917426+00:00
+2025-04-14 13:18:04.822 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (distillation) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 13:18:04.834 | ERROR    | src.arxiv_fetcher:check_new_papers:145 - Error checking new papers: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:18:04.841 | ERROR    | src.main:check_new_papers:162 - 新規論文チェックエラー: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:18:04.847 | ERROR    | src.app:check_new_papers:87 - 新規論文チェックエラー: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:18:12.473 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T04:00:52.917426+00:00
+2025-04-14 13:18:12.475 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (distillation) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 13:18:12.480 | ERROR    | src.arxiv_fetcher:check_new_papers:145 - Error checking new papers: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:18:12.481 | ERROR    | src.main:check_new_papers:162 - 新規論文チェックエラー: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:18:12.486 | ERROR    | src.app:check_new_papers:87 - 新規論文チェックエラー: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:19:11.528 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T04:00:52.917426+00:00
+2025-04-14 13:19:11.532 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (distillation) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 13:19:11.534 | ERROR    | src.arxiv_fetcher:check_new_papers:145 - Error checking new papers: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:19:11.539 | ERROR    | src.main:check_new_papers:162 - 新規論文チェックエラー: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:19:11.543 | ERROR    | src.app:check_new_papers:87 - 新規論文チェックエラー: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:19:12.454 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T04:00:52.917426+00:00
+2025-04-14 13:19:12.458 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (distillation) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 13:19:12.462 | ERROR    | src.arxiv_fetcher:check_new_papers:145 - Error checking new papers: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:19:12.462 | ERROR    | src.main:check_new_papers:162 - 新規論文チェックエラー: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:19:12.468 | ERROR    | src.app:check_new_papers:87 - 新規論文チェックエラー: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:19:13.760 | INFO     | src.arxiv_fetcher:check_new_papers:95 - Checking papers since: 2025-04-13T04:00:52.917426+00:00
+2025-04-14 13:19:13.761 | INFO     | src.arxiv_fetcher:check_new_papers:106 - Searching with query: (distillation) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 13:19:13.761 | ERROR    | src.arxiv_fetcher:check_new_papers:145 - Error checking new papers: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:19:13.766 | ERROR    | src.main:check_new_papers:162 - 新規論文チェックエラー: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:19:13.771 | ERROR    | src.app:check_new_papers:87 - 新規論文チェックエラー: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:21:39.995 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:21:53.591 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:21:58.812 | INFO     | src.arxiv_fetcher:search_papers:184 - Executing search with query: distillation
+2025-04-14 13:21:58.815 | ERROR    | src.arxiv_fetcher:search_papers:215 - Error during paper search: object generator can't be used in 'await' expression
+2025-04-14 13:21:58.817 | ERROR    | src.main:search_and_summarize:92 - 検索・要約処理エラー: object generator can't be used in 'await' expression
+2025-04-14 13:22:00.248 | INFO     | src.arxiv_fetcher:search_papers:184 - Executing search with query: distillation
+2025-04-14 13:22:00.249 | ERROR    | src.arxiv_fetcher:search_papers:215 - Error during paper search: object generator can't be used in 'await' expression
+2025-04-14 13:22:00.251 | ERROR    | src.main:search_and_summarize:92 - 検索・要約処理エラー: object generator can't be used in 'await' expression
+2025-04-14 13:23:49.612 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:23:53.875 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:23:59.257 | INFO     | src.arxiv_fetcher:search_papers:184 - Executing search with query: distillation
+2025-04-14 13:23:59.997 | INFO     | src.arxiv_fetcher:search_papers:234 - Found 1 papers for query: distillation
+2025-04-14 13:23:59.997 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 13:24:04.404 | INFO     | src.arxiv_fetcher:check_new_papers:97 - Checking papers since: 2025-04-14 04:00:52.917426+00:00
+2025-04-14 13:24:04.410 | INFO     | src.arxiv_fetcher:check_new_papers:115 - Searching with query: ((distillation) OR (deep learning)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 13:24:04.413 | ERROR    | src.arxiv_fetcher:check_new_papers:149 - Error checking new papers: object generator can't be used in 'await' expression
+2025-04-14 13:24:04.413 | ERROR    | src.main:check_new_papers:162 - 新規論文チェックエラー: object generator can't be used in 'await' expression
+2025-04-14 13:24:04.415 | ERROR    | src.app:check_new_papers:87 - 新規論文チェックエラー: object generator can't be used in 'await' expression
+2025-04-14 13:24:05.354 | INFO     | src.arxiv_fetcher:check_new_papers:97 - Checking papers since: 2025-04-14 04:00:52.917426+00:00
+2025-04-14 13:24:05.356 | INFO     | src.arxiv_fetcher:check_new_papers:115 - Searching with query: ((distillation) OR (deep learning)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 13:24:05.359 | ERROR    | src.arxiv_fetcher:check_new_papers:149 - Error checking new papers: object generator can't be used in 'await' expression
+2025-04-14 13:24:05.364 | ERROR    | src.main:check_new_papers:162 - 新規論文チェックエラー: object generator can't be used in 'await' expression
+2025-04-14 13:24:05.369 | ERROR    | src.app:check_new_papers:87 - 新規論文チェックエラー: object generator can't be used in 'await' expression
+2025-04-14 13:24:06.019 | INFO     | src.arxiv_fetcher:check_new_papers:97 - Checking papers since: 2025-04-14 04:00:52.917426+00:00
+2025-04-14 13:24:06.019 | INFO     | src.arxiv_fetcher:check_new_papers:115 - Searching with query: ((distillation) OR (deep learning)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 13:24:06.025 | ERROR    | src.arxiv_fetcher:check_new_papers:149 - Error checking new papers: object generator can't be used in 'await' expression
+2025-04-14 13:24:06.027 | ERROR    | src.main:check_new_papers:162 - 新規論文チェックエラー: object generator can't be used in 'await' expression
+2025-04-14 13:24:06.030 | ERROR    | src.app:check_new_papers:87 - 新規論文チェックエラー: object generator can't be used in 'await' expression
+2025-04-14 13:24:06.960 | INFO     | src.arxiv_fetcher:check_new_papers:97 - Checking papers since: 2025-04-14 04:00:52.917426+00:00
+2025-04-14 13:24:06.960 | INFO     | src.arxiv_fetcher:check_new_papers:115 - Searching with query: ((distillation) OR (deep learning)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 13:24:06.960 | ERROR    | src.arxiv_fetcher:check_new_papers:149 - Error checking new papers: object generator can't be used in 'await' expression
+2025-04-14 13:24:06.967 | ERROR    | src.main:check_new_papers:162 - 新規論文チェックエラー: object generator can't be used in 'await' expression
+2025-04-14 13:24:06.969 | ERROR    | src.app:check_new_papers:87 - 新規論文チェックエラー: object generator can't be used in 'await' expression
+2025-04-14 13:26:47.307 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:26:53.121 | INFO     | src.main:start_scheduler:31 - Scheduler started
+2025-04-14 13:30:14.288 | INFO     | src.main:stop_scheduler:37 - Scheduler stopped
+2025-04-14 13:35:11.792 | INFO     | src.main:start_scheduler:43 - Scheduler started
+2025-04-14 13:35:20.956 | INFO     | src.arxiv_fetcher:search_papers:184 - Executing search with query: distillation
+2025-04-14 13:35:20.956 | ERROR    | src.arxiv_fetcher:search_papers:218 - Error during paper search: object generator can't be used in 'await' expression
+2025-04-14 13:35:20.959 | ERROR    | src.main:search_and_summarize:104 - 検索・要約処理エラー: object generator can't be used in 'await' expression
+2025-04-14 13:35:21.912 | INFO     | src.arxiv_fetcher:search_papers:184 - Executing search with query: distillation
+2025-04-14 13:35:21.914 | ERROR    | src.arxiv_fetcher:search_papers:218 - Error during paper search: object generator can't be used in 'await' expression
+2025-04-14 13:35:21.914 | ERROR    | src.main:search_and_summarize:104 - 検索・要約処理エラー: object generator can't be used in 'await' expression
+2025-04-14 13:38:49.155 | INFO     | src.arxiv_fetcher:search_papers:184 - Executing search with query: distillation
+2025-04-14 13:38:49.159 | ERROR    | src.arxiv_fetcher:search_papers:218 - Error during paper search: object generator can't be used in 'await' expression
+2025-04-14 13:38:49.160 | ERROR    | src.main:search_and_summarize:104 - 検索・要約処理エラー: object generator can't be used in 'await' expression
+2025-04-14 13:38:49.267 | INFO     | src.main:stop_scheduler:49 - Scheduler stopped
+2025-04-14 13:38:51.849 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 13:38:51.855 | INFO     | src.arxiv_fetcher:search_papers:184 - Executing search with query: distillation
+2025-04-14 13:38:51.856 | ERROR    | src.arxiv_fetcher:search_papers:218 - Error during paper search: object generator can't be used in 'await' expression
+2025-04-14 13:38:51.857 | ERROR    | src.main:search_and_summarize:127 - 検索・要約処理エラー: object generator can't be used in 'await' expression
+2025-04-14 13:40:48.123 | INFO     | src.arxiv_fetcher:search_papers:184 - Executing search with query: distillation
+2025-04-14 13:40:48.126 | ERROR    | src.arxiv_fetcher:search_papers:218 - Error during paper search: object generator can't be used in 'await' expression
+2025-04-14 13:40:48.127 | ERROR    | src.main:search_and_summarize:127 - 検索・要約処理エラー: object generator can't be used in 'await' expression
+2025-04-14 13:42:34.795 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 13:42:36.992 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 13:42:36.995 | INFO     | src.arxiv_fetcher:search_papers:184 - Executing search with query: distillation
+2025-04-14 13:42:36.995 | ERROR    | src.arxiv_fetcher:search_papers:217 - Error during paper search: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:42:36.995 | ERROR    | src.main:search_and_summarize:127 - 検索・要約処理エラー: 'async for' requires an object with __aiter__ method, got generator
+2025-04-14 13:43:19.539 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 13:43:21.739 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 13:45:57.692 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 13:53:09.589 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 13:53:09.592 | INFO     | src.arxiv_fetcher:search_papers:167 - Executing search with query: distillation
+2025-04-14 13:53:10.299 | INFO     | src.arxiv_fetcher:search_papers:197 - Found 1 papers for query: distillation
+2025-04-14 13:53:10.299 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 13:58:07.100 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 13:58:10.191 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:00:08.228 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:00:13.436 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:00:14.263 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 5 papers for query: distillation
+2025-04-14 14:00:14.263 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 14:00:14.265 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Proxy-Anchor and EVT-Driven Continual Learning Method for Generalized Category Discovery
+2025-04-14 14:00:14.265 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Embodied Image Captioning: Self-supervised Learning Agents for Spatially Coherent Image Descriptions
+2025-04-14 14:00:14.267 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Muon-Accelerated Attention Distillation for Real-Time Edge Synthesis via Optimized Latent Diffusion
+2025-04-14 14:00:20.760 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Customizing Spider Silk: Generative Models with Mechanical Property Conditioning for Protein Engineering
+2025-04-14 14:00:31.293 | INFO     | src.arxiv_fetcher:check_new_papers:93 - Checking papers since: 2025-04-14 04:00:52.917426+00:00
+2025-04-14 14:00:31.298 | INFO     | src.arxiv_fetcher:check_new_papers:109 - Searching with query: ((distillation) OR (deep learning)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 14:00:37.185 | INFO     | src.arxiv_fetcher:check_new_papers:141 - No new papers found
+2025-04-14 14:02:51.099 | INFO     | src.arxiv_fetcher:check_new_papers:93 - Checking papers since: 2025-04-14 04:00:52.917426+00:00
+2025-04-14 14:02:51.103 | INFO     | src.arxiv_fetcher:check_new_papers:109 - Searching with query: ((distillation) OR (deep learning)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 14:03:09.876 | INFO     | src.arxiv_fetcher:check_new_papers:141 - No new papers found
+2025-04-14 14:03:09.996 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:03:12.516 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:04:50.835 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: yolo
+2025-04-14 14:05:01.266 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: yolo
+2025-04-14 14:05:05.163 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Shadow Erosion and Nighttime Adaptability for Camera-Based Automated Driving Applications
+2025-04-14 14:05:05.167 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: yolo
+2025-04-14 14:05:06.462 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: yolo
+2025-04-14 14:05:06.462 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Shadow Erosion and Nighttime Adaptability for Camera-Based Automated Driving Applications
+2025-04-14 14:05:06.593 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:05:09.725 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:05:37.944 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:05:49.725 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: distillation
+2025-04-14 14:05:49.730 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 14:05:49.836 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:05:52.599 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:05:52.602 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:05:56.999 | ERROR    | src.arxiv_fetcher:search_papers:203 - Error during paper search: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:05:56.999 | ERROR    | src.main:search_and_summarize:125 - 検索・要約処理エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:05:56.999 | ERROR    | src.app:search_papers:62 - 検索エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:06:18.929 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:06:23.290 | ERROR    | src.arxiv_fetcher:search_papers:203 - Error during paper search: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:06:23.290 | ERROR    | src.main:search_and_summarize:125 - 検索・要約処理エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:06:23.290 | ERROR    | src.app:search_papers:62 - 検索エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:06:27.619 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:06:31.187 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:06:48.660 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:06:49.816 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 5 papers for query: distillation
+2025-04-14 14:06:49.816 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 14:06:49.816 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Proxy-Anchor and EVT-Driven Continual Learning Method for Generalized Category Discovery
+2025-04-14 14:06:49.816 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Embodied Image Captioning: Self-supervised Learning Agents for Spatially Coherent Image Descriptions
+2025-04-14 14:06:49.816 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Muon-Accelerated Attention Distillation for Real-Time Edge Synthesis via Optimized Latent Diffusion
+2025-04-14 14:06:49.816 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Customizing Spider Silk: Generative Models with Mechanical Property Conditioning for Protein Engineering
+2025-04-14 14:06:49.825 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:06:57.028 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 5 papers for query: distillation
+2025-04-14 14:06:57.029 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 14:06:57.030 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Proxy-Anchor and EVT-Driven Continual Learning Method for Generalized Category Discovery
+2025-04-14 14:06:57.031 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Embodied Image Captioning: Self-supervised Learning Agents for Spatially Coherent Image Descriptions
+2025-04-14 14:06:57.031 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Muon-Accelerated Attention Distillation for Real-Time Edge Synthesis via Optimized Latent Diffusion
+2025-04-14 14:06:57.032 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Customizing Spider Silk: Generative Models with Mechanical Property Conditioning for Protein Engineering
+2025-04-14 14:07:23.730 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:07:37.839 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: distillation
+2025-04-14 14:07:37.839 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 14:07:39.310 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:07:49.080 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: distillation
+2025-04-14 14:07:49.081 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 14:11:18.667 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:11:32.953 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: distillation
+2025-04-14 14:11:32.953 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 14:11:39.086 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:11:43.593 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:11:52.980 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: deep learning
+2025-04-14 14:11:53.803 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 5 papers for query: deep learning
+2025-04-14 14:11:59.496 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation
+2025-04-14 14:12:04.959 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Quantum Large Language Model Fine-Tuning
+2025-04-14 14:12:10.354 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Dimension reduction for derivative-informed operator learning: An analysis of approximation errors
+2025-04-14 14:12:23.761 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: Steering CLIP's vision transformer with sparse autoencoders
+2025-04-14 14:12:29.060 | INFO     | src.paper_summarizer:summarize:72 - Cached summary for paper: End-to-End Demonstration of Quantum Generative Adversarial Networks for Steel Microstructure Image Augmentation on a Trapped-Ion Quantum Computer
+2025-04-14 14:14:26.636 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:14:29.164 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:15:22.173 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: deep learning
+2025-04-14 14:15:23.113 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: deep learning
+2025-04-14 14:15:23.115 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation
+2025-04-14 14:15:29.688 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:15:33.090 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:15:39.920 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: deep learning
+2025-04-14 14:15:45.097 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 5 papers for query: deep learning
+2025-04-14 14:15:45.097 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation
+2025-04-14 14:15:45.097 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Quantum Large Language Model Fine-Tuning
+2025-04-14 14:15:45.097 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Dimension reduction for derivative-informed operator learning: An analysis of approximation errors
+2025-04-14 14:15:45.097 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Steering CLIP's vision transformer with sparse autoencoders
+2025-04-14 14:15:45.097 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: End-to-End Demonstration of Quantum Generative Adversarial Networks for Steel Microstructure Image Augmentation on a Trapped-Ion Quantum Computer
+2025-04-14 14:15:45.106 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: deep learning
+2025-04-14 14:15:59.177 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 5 papers for query: deep learning
+2025-04-14 14:15:59.190 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation
+2025-04-14 14:15:59.192 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Quantum Large Language Model Fine-Tuning
+2025-04-14 14:15:59.192 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Dimension reduction for derivative-informed operator learning: An analysis of approximation errors
+2025-04-14 14:15:59.192 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Steering CLIP's vision transformer with sparse autoencoders
+2025-04-14 14:15:59.192 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: End-to-End Demonstration of Quantum Generative Adversarial Networks for Steel Microstructure Image Augmentation on a Trapped-Ion Quantum Computer
+2025-04-14 14:15:59.199 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: deep learning
+2025-04-14 14:16:06.562 | ERROR    | src.arxiv_fetcher:search_papers:203 - Error during paper search: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:16:06.562 | ERROR    | src.main:search_and_summarize:125 - 検索・要約処理エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:16:06.566 | ERROR    | src.app:search_papers:62 - 検索エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:16:13.725 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:16:19.316 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:16:32.965 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: deep learning
+2025-04-14 14:16:37.450 | ERROR    | src.arxiv_fetcher:search_papers:203 - Error during paper search: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:16:37.450 | ERROR    | src.main:search_and_summarize:125 - 検索・要約処理エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:16:37.450 | ERROR    | src.app:search_papers:62 - 検索エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:16:40.523 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: deep learning
+2025-04-14 14:16:47.703 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: deep learning
+2025-04-14 14:16:47.703 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation
+2025-04-14 14:19:59.018 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:20:06.038 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:20:10.277 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:20:14.661 | ERROR    | src.arxiv_fetcher:search_papers:203 - Error during paper search: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:20:14.661 | ERROR    | src.main:search_and_summarize:125 - 検索・要約処理エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:20:14.661 | ERROR    | src.app:search_papers:62 - 検索エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:20:19.076 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:20:23.448 | ERROR    | src.arxiv_fetcher:search_papers:203 - Error during paper search: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:20:23.448 | ERROR    | src.main:search_and_summarize:125 - 検索・要約処理エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:20:23.449 | ERROR    | src.app:search_papers:62 - 検索エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:20:26.696 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:20:29.619 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: distillation
+2025-04-14 14:20:29.632 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 14:21:13.145 | INFO     | src.arxiv_fetcher:check_new_papers:93 - Checking papers since: 2025-04-14 04:00:52.917426+00:00
+2025-04-14 14:21:13.146 | INFO     | src.arxiv_fetcher:check_new_papers:109 - Searching with query: ((distillation) OR (deep learning)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 14:21:29.669 | ERROR    | src.arxiv_fetcher:check_new_papers:146 - Error checking new papers: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:21:29.669 | ERROR    | src.main:check_new_papers:229 - 新規論文チェックエラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:21:29.672 | ERROR    | src.app:check_new_papers:97 - 新規論文チェックエラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:25:02.659 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:25:05.927 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:25:44.566 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:25:47.101 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:25:47.543 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:25:51.992 | ERROR    | src.arxiv_fetcher:search_papers:203 - Error during paper search: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:25:51.992 | ERROR    | src.main:search_and_summarize:120 - 検索・要約処理エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:25:51.992 | ERROR    | src.app:search_papers:62 - 検索エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:25:54.428 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:26:06.381 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: distillation
+2025-04-14 14:26:06.381 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 14:26:18.064 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:26:22.488 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:26:30.450 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:26:31.454 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: distillation
+2025-04-14 14:26:31.454 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 14:26:39.285 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:27:22.303 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:27:27.635 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:27:32.026 | ERROR    | src.arxiv_fetcher:search_papers:203 - Error during paper search: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:27:32.027 | ERROR    | src.main:search_and_summarize:120 - 検索・要約処理エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:27:32.027 | ERROR    | src.app:search_papers:62 - 検索エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:27:53.676 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: distillation
+2025-04-14 14:28:02.776 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: distillation
+2025-04-14 14:28:02.777 | INFO     | src.paper_summarizer:summarize:40 - Cache hit for paper: Knowledge Distillation for Multimodal Egocentric Action Recognition Robust to Missing Modalities
+2025-04-14 14:28:02.888 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:28:06.040 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:28:08.867 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: yolo
+2025-04-14 14:28:13.245 | ERROR    | src.arxiv_fetcher:search_papers:203 - Error during paper search: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:28:13.247 | ERROR    | src.main:search_and_summarize:120 - 検索・要約処理エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:28:13.247 | ERROR    | src.app:search_papers:62 - 検索エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:28:13.251 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: yolo
+2025-04-14 14:28:17.621 | ERROR    | src.arxiv_fetcher:search_papers:203 - Error during paper search: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:28:17.621 | ERROR    | src.main:search_and_summarize:120 - 検索・要約処理エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:28:17.621 | ERROR    | src.app:search_papers:62 - 検索エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:28:58.211 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:29:00.638 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:29:03.970 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: yolo
+2025-04-14 14:29:18.185 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: yolo
+2025-04-14 14:29:18.185 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: Shadow Erosion and Nighttime Adaptability for Camera-Based Automated Driving Applications
+2025-04-14 14:29:45.923 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: aiu
+2025-04-14 14:29:59.858 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: aiu
+2025-04-14 14:29:59.862 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: aiu
+2025-04-14 14:30:07.243 | ERROR    | src.arxiv_fetcher:search_papers:203 - Error during paper search: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:30:07.243 | ERROR    | src.main:search_and_summarize:120 - 検索・要約処理エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:30:07.243 | ERROR    | src.app:search_papers:62 - 検索エラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:30:31.660 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: deep learning
+2025-04-14 14:30:32.859 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 1 papers for query: deep learning
+2025-04-14 14:30:32.859 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation
+2025-04-14 14:30:47.308 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: computer vision
+2025-04-14 14:30:50.846 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 5 papers for query: computer vision
+2025-04-14 14:30:50.846 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation
+2025-04-14 14:30:50.846 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: Steering CLIP's vision transformer with sparse autoencoders
+2025-04-14 14:30:50.846 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: End-to-End Demonstration of Quantum Generative Adversarial Networks for Steel Microstructure Image Augmentation on a Trapped-Ion Quantum Computer
+2025-04-14 14:30:50.854 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: computer vision
+2025-04-14 14:30:58.346 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 5 papers for query: computer vision
+2025-04-14 14:30:58.346 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation
+2025-04-14 14:30:58.346 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: Steering CLIP's vision transformer with sparse autoencoders
+2025-04-14 14:30:58.346 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: End-to-End Demonstration of Quantum Generative Adversarial Networks for Steel Microstructure Image Augmentation on a Trapped-Ion Quantum Computer
+2025-04-14 14:31:53.392 | INFO     | src.arxiv_fetcher:search_papers:169 - Executing search with query: computer vision
+2025-04-14 14:31:55.378 | INFO     | src.arxiv_fetcher:search_papers:199 - Found 5 papers for query: computer vision
+2025-04-14 14:31:55.378 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: GigaTok: Scaling Visual Tokenizers to 3 Billion Parameters for Autoregressive Image Generation
+2025-04-14 14:31:55.388 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: Steering CLIP's vision transformer with sparse autoencoders
+2025-04-14 14:31:55.388 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: End-to-End Demonstration of Quantum Generative Adversarial Networks for Steel Microstructure Image Augmentation on a Trapped-Ion Quantum Computer
+2025-04-14 14:32:22.852 | INFO     | src.arxiv_fetcher:check_new_papers:93 - Checking papers since: 2025-04-14 04:00:52.917426+00:00
+2025-04-14 14:32:22.852 | INFO     | src.arxiv_fetcher:check_new_papers:109 - Searching with query: ((distillation) OR (deep learning) OR (yolo)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 14:32:27.223 | ERROR    | src.arxiv_fetcher:check_new_papers:146 - Error checking new papers: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:32:27.223 | ERROR    | src.main:check_new_papers:216 - 新規論文チェックエラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:32:27.223 | ERROR    | src.app:check_new_papers:98 - 新規論文チェックエラー: [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。
+2025-04-14 14:38:01.093 | INFO     | src.main:stop_scheduler:50 - Scheduler stopped
+2025-04-14 14:49:27.155 | INFO     | src.main:start_scheduler:44 - Scheduler started
+2025-04-14 14:49:30.903 | INFO     | src.arxiv_fetcher:check_new_papers:93 - Checking papers since: 2025-04-14 04:00:52.917426+00:00
+2025-04-14 14:49:30.906 | INFO     | src.arxiv_fetcher:check_new_papers:109 - Searching with query: ((distillation) OR (deep learning)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 14:50:10.164 | INFO     | src.arxiv_fetcher:check_new_papers:141 - No new papers found
+2025-04-14 14:50:21.934 | INFO     | src.arxiv_fetcher:check_new_papers:93 - Checking papers since: 2025-04-14 04:00:52.917426+00:00
+2025-04-14 14:50:21.934 | INFO     | src.arxiv_fetcher:check_new_papers:109 - Searching with query: ((distillation) OR (deep learning)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 14:50:24.053 | INFO     | src.arxiv_fetcher:check_new_papers:141 - No new papers found
+2025-04-14 14:51:01.784 | INFO     | src.arxiv_fetcher:check_new_papers:93 - Checking papers since: 2025-04-14 04:00:52.917426+00:00
+2025-04-14 14:51:01.785 | INFO     | src.arxiv_fetcher:check_new_papers:109 - Searching with query: ((distillation) OR (deep learning)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 14:51:15.847 | INFO     | src.arxiv_fetcher:check_new_papers:141 - No new papers found
+2025-04-14 14:51:35.301 | INFO     | src.arxiv_fetcher:check_new_papers:93 - Checking papers since: 2025-04-10 04:00:52.917426+00:00
+2025-04-14 14:51:35.301 | INFO     | src.arxiv_fetcher:check_new_papers:109 - Searching with query: ((distillation) OR (deep learning)) AND (cat:cs.AI OR cat:cs.LG OR cat:stat.ML)
+2025-04-14 14:51:56.304 | INFO     | src.arxiv_fetcher:update_last_check:215 - Updated last check time to: 2025-04-14 05:51:56.304284+00:00
+2025-04-14 14:51:56.304 | INFO     | src.arxiv_fetcher:check_new_papers:139 - Found 100 new papers matching the watched keywords
+2025-04-14 14:51:56.313 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: Dimension reduction for derivative-informed operator learning: An analysis of approximation errors
+2025-04-14 14:51:56.313 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: Steering CLIP's vision transformer with sparse autoencoders
+2025-04-14 14:51:56.316 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: Proxy-Anchor and EVT-Driven Continual Learning Method for Generalized Category Discovery
+2025-04-14 14:51:56.321 | INFO     | src.paper_summarizer:summarize:41 - Cache hit for paper: Customizing Spider Silk: Generative Models with Mechanical Property Conditioning for Protein Engineering
