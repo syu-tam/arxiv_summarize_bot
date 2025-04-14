@@ -42,13 +42,39 @@ ENV/
 # OS関連
 .DS_Store
 Thumbs.db
-*.log
 desktop.ini
 
-# プロジェクト固有
+# ログファイル
+*.log
 logs/
+logs/**/*
+
+# キャッシュ関連
 cache/
+cache/**/*
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+
+# プロジェクト固有のデータファイル
+data/
+data/**/*
 *.db
 *.db-shm
 *.db-wal
-data/*.json
+
+# 設定ファイル（必要に応じてコメントアウト）
+# *.json
+
+# バックアップファイル
+*~
+*.bak
+*.swp
+*.swo
+
+# 一時ファイル
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
