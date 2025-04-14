@@ -10,8 +10,7 @@ logger.add("logs/paper_summarizer.log", rotation="500 MB")
 class PaperSummarizer:
     def __init__(self):
         load_dotenv()
-        #self.test_mode = os.getenv("TEST_MODE", "false").lower() == "true"
-        self.test_mode = True
+        self.test_mode = os.getenv("TEST_MODE", "false").lower() == "true"
         if not self.test_mode:
             api_key = os.getenv("OPENAI_API_KEY")
             if not api_key:

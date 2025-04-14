@@ -241,6 +241,122 @@
     margin-bottom: 0.8rem;
 }
 
+/* アコーディオンスタイル */
+.date-section {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.date-header {
+    padding: 1rem 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.date-header:hover {
+    background-color: #e9ecef;
+}
+
+.date-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+}
+
+.date-content {
+    padding: 1.5rem;
+    display: none;
+}
+
+.date-content.active {
+    display: block;
+}
+
+.date-header .toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.date-header.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* キーワードセクションの調整 */
+.keyword-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.keyword-section:last-child {
+    margin-bottom: 0;
+}
+
+/* キーワードセクションのアコーディオンスタイル */
+.keyword-header {
+    padding: 0.8rem 1.2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    margin-bottom: 0;
+}
+
+.keyword-header:hover {
+    background-color: #e9ecef;
+}
+
+.keyword-content {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    display: none;
+}
+
+.keyword-content.active {
+    display: block;
+}
+
+.keyword-header .toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.keyword-header.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.keyword-section {
+    margin-bottom: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.keyword-section:last-child {
+    margin-bottom: 0;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+    .date-header {
+        padding: 0.8rem 1rem;
+    }
+    
+    .date-content {
+        padding: 1rem;
+    }
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
     .date-section {

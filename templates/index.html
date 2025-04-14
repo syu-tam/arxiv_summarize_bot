@@ -32,8 +32,8 @@
                         </div>
                         <div class="col-md-2">
                             <div class="form-floating">
-                                <input type="number" id="maxResults" class="form-control" value="5" min="1" max="10">
-                                <label for="maxResults">件数 (1-10)</label>
+                                <input type="number" id="maxResults" class="form-control" value="5" min="1" max="100">
+                                <label for="maxResults">件数 (1-100)</label>
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -51,6 +51,13 @@
 
                     <div class="collapse mt-3" id="advancedSearch">
                         <div class="card card-body bg-light">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="fromDate" class="form-label">検索開始日</label>
+                                    <input type="date" id="fromDate" class="form-control">
+                                    <small class="form-text text-muted">この日付以降に公開された論文を検索します</small>
+                                </div>
+                            </div>
                             <h5 class="card-title mb-3">カテゴリーフィルター</h5>
                             <div id="categoryFilters" class="row">
                                 <!-- カテゴリーは動的に読み込まれます -->

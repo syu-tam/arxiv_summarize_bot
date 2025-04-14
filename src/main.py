@@ -6,7 +6,7 @@ from .paper_summarizer import PaperSummarizer
 from .email_notifier import EmailNotifier
 from typing import List, Dict, Any, Optional
 from loguru import logger
-from datetime import datetime
+from datetime import datetime, timezone, timedelta  # timezoneを追加
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 # 定数
@@ -169,26 +169,34 @@ class PaperService:
     def group_papers_by_date_and_keyword(self, papers: List[Dict[str, Any]], keywords: List[str]) -> Dict[str, Dict[str, List[Dict[str, Any]]]]:
         """論文を日付とキーワードでグループ化"""
         grouped = {}
+        # キーワード未指定時や論文が0件の場合のチェック
+        if not papers:
+            return grouped
+            
+        # 既に表示に含まれた論文のIDを管理
+        displayed_paper_ids = set()
+            
         for paper in papers:
-            # 日付の取得とフォーマット
-            date = datetime.fromisoformat(paper['published']).strftime('%Y-%m-%d')
+            # 日付の取得とフォーマット（タイムゾーン情報を保持）
+            published_date = datetime.fromisoformat(paper['published'])
+            date = published_date.astimezone(timezone.utc).strftime('%Y-%m-%d')
             
-            # 論文が含むキーワードを特定
-            paper_keywords = []
-            title_and_summary = (paper['title'] + ' ' + paper['summary']).lower()
-            for keyword in keywords:
-                if keyword.lower() in title_and_summary:
-                    paper_keywords.append(keyword)
+            # 論文のキーワードを取得（新しい実装では既にmatched_keywordが設定されている）
+            keyword = paper.get('matched_keyword', 'その他の論文')
             
-            # 各キーワードについて日付グループに追加
-            for keyword in paper_keywords:
-                if date not in grouped:
-                    grouped[date] = {}
-                if keyword not in grouped[date]:
-                    grouped[date][keyword] = []
+            # 日付グループの追加
+            if date not in grouped:
+                grouped[date] = {}
+            if keyword not in grouped[date]:
+                grouped[date][keyword] = []
+            
+            # 論文IDを確認して重複を防止
+            paper_id = paper.get('entry_id', '')
+            if paper_id not in displayed_paper_ids:
                 grouped[date][keyword].append(paper)
+                displayed_paper_ids.add(paper_id)
         
-        # 日付でソート
+        # 日付でソート（新しい順）
         return dict(sorted(grouped.items(), reverse=True))
 
     async def check_new_papers(self) -> List[Dict[str, Any]]:

@@ -10,7 +10,7 @@ from fastapi import Query
 from typing import Optional, List, Dict, Any
 from pathlib import Path
 from loguru import logger
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone, timedelta  # timezoneを追加
 
 app = FastAPI(title="arXiv Paper Summarizer")
 
@@ -88,11 +88,22 @@ async def check_new_papers():
     """新規論文をチェック"""
     try:
         papers = await paper_service.check_new_papers()
-        if isinstance(papers, dict):
-            papers = papers.get("papers", [])
+        if papers:
+            # 監視中のキーワードを取得
+            watched_keywords = paper_service.get_watched_keywords()
+            # 論文を日付とキーワードでグループ化
+            grouped_papers = paper_service.group_papers_by_date_and_keyword(
+                papers, watched_keywords["keywords"]
+            )
+            return {
+                "status": "success",
+                "grouped_papers": grouped_papers,
+                "papers": papers  # 後方互換性のために残す
+            }
         return {
             "status": "success",
-            "papers": papers
+            "grouped_papers": {},
+            "papers": []
         }
     except Exception as e:
         logger.error(f"新規論文チェックエラー: {str(e)}")
@@ -143,10 +154,10 @@ async def test_recent_papers(
     query: str = "machine learning",
     max_results: int = Query(default=10, ge=1, le=100)
 ):
-    """テスト用：最近5日間の論文を検索"""
+    """テスト用：最近の論文を検索"""
     try:
-        # 5日前の日時を計算
-        since_date = datetime.now(timezone.utc) - timedelta(days=5)
+        # 30日前の日時を計算（以前は5日だった）
+        since_date = datetime.now(timezone.utc) - timedelta(days=30)
         papers = await paper_service.test_recent_papers(query, max_results, since_date)
         return {
             "status": "success",
@@ -159,5 +170,41 @@ async def test_recent_papers(
         return {
             "status": "error",
             "message": "論文の検索に失敗しました",
+            "papers": []
+        }
+
+@app.get("/api/search_by_date")
+async def search_papers_by_date(
+    query: str,
+    from_date: str,  # 'YYYY-MM-DD'形式
+    max_results: int = Query(default=10, ge=1, le=100)
+):
+    """特定の日付以降の論文を検索するAPI"""
+    try:
+        # 日付文字列をdatetimeオブジェクトに変換
+        try:
+            since_date = datetime.fromisoformat(from_date)
+            # タイムゾーン情報がない場合はUTCとして扱う
+            if since_date.tzinfo is None:
+                since_date = since_date.replace(tzinfo=timezone.utc)
+        except ValueError:
+            return {
+                "status": "error",
+                "message": "日付の形式が正しくありません。YYYY-MM-DD形式で指定してください。",
+                "papers": []
+            }
+            
+        papers = await paper_service.test_recent_papers(query, max_results, since_date)
+        return {
+            "status": "success",
+            "message": "新着論文はありませんでした" if not papers else f"{len(papers)}件の論文が見つかりました",
+            "papers": papers,
+            "search_from_date": from_date
+        }
+    except Exception as e:
+        logger.error(f"日付検索エラー: {str(e)}")
+        return {
+            "status": "error",
+            "message": "指定された日付での検索に失敗しました",
             "papers": []
         }
