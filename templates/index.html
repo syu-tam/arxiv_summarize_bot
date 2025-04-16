@@ -80,12 +80,20 @@
 
         <div class="watched-keywords-section card mb-4">
             <div class="card-body">
-                <h5 class="card-title mb-3">
-                    <i class="bi bi-bell"></i> 監視中のキーワード
-                    <button class="btn btn-sm btn-primary float-end" onclick="checkNewPapers()">
-                        <i class="bi bi-arrow-clockwise"></i> 新着論文をチェック
-                    </button>
-                </h5>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="card-title mb-0">
+                        <i class="bi bi-bell"></i> 監視中のキーワード
+                    </h5>
+                    <div class="d-flex align-items-center">
+                        <div class="form-check form-switch me-3">
+                            <input class="form-check-input" type="checkbox" id="watchKeywordJapaneseSummary" checked>
+                            <label class="form-check-label" for="watchKeywordJapaneseSummary">日本語要約を有効にする</label>
+                        </div>
+                        <button class="btn btn-sm btn-primary" onclick="checkNewPapers()">
+                            <i class="bi bi-arrow-clockwise"></i> 新着論文をチェック
+                        </button>
+                    </div>
+                </div>
                 <div id="watchedKeywords" class="mb-3">
                     <!-- 監視中のキーワードがここに表示されます -->
                 </div>

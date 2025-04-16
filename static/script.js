@@ -1,9 +1,65 @@
 let currentResults = [];
 let categories = {};
+let currentGroupedPapers = null;
+
+// ユーザー設定を管理するオブジェクト
+const userSettings = {
+    // 設定を初期化・ロードする
+    init: function() {
+        // 監視キーワード検索結果の日本語要約設定をロード
+        this.watchKeywordJapaneseSummary = this.loadSetting('watchKeywordJapaneseSummary', true);
+        
+        // 設定画面の表示を初期化
+        this.updateSettingsUI();
+        
+        console.log("ユーザー設定を読み込みました:", this.watchKeywordJapaneseSummary);
+    },
+    
+    // 設定値を保存
+    saveSetting: function(key, value) {
+        localStorage.setItem(key, JSON.stringify(value));
+    },
+    
+    // 設定値を読み込み
+    loadSetting: function(key, defaultValue) {
+        const savedValue = localStorage.getItem(key);
+        return savedValue !== null ? JSON.parse(savedValue) : defaultValue;
+    },
+    
+    // 監視キーワードの日本語要約設定を切り替え
+    toggleWatchKeywordJapaneseSummary: function() {
+        this.watchKeywordJapaneseSummary = !this.watchKeywordJapaneseSummary;
+        this.saveSetting('watchKeywordJapaneseSummary', this.watchKeywordJapaneseSummary);
+        
+        // 既に表示されている論文を更新
+        if (currentResults.length > 0) {
+            displayResults(currentResults, null, this.watchKeywordJapaneseSummary);
+        }
+    },
+    
+    // 設定UIを更新
+    updateSettingsUI: function() {
+        const watchKeywordSummaryToggle = document.getElementById('watchKeywordJapaneseSummary');
+        if (watchKeywordSummaryToggle) {
+            watchKeywordSummaryToggle.checked = this.watchKeywordJapaneseSummary;
+        }
+    }
+};
 
 // ページ読み込み時の初期化
 document.addEventListener('DOMContentLoaded', async () => {
     try {
+        // ユーザー設定を初期化
+        userSettings.init();
+        
+        // 監視キーワード日本語要約設定のイベントリスナーを設定
+        const watchKeywordSummaryToggle = document.getElementById('watchKeywordJapaneseSummary');
+        if (watchKeywordSummaryToggle) {
+            watchKeywordSummaryToggle.addEventListener('change', function() {
+                userSettings.toggleWatchKeywordJapaneseSummary();
+            });
+        }
+        
         // カテゴリー情報の取得
         const response = await fetch('/api/categories');
         const data = await response.json();
@@ -367,7 +423,9 @@ async function checkNewPapers() {
     const resultsSectionEl = document.getElementById('results-section');
     const resultsEl = document.getElementById('results');
     const successEl = document.getElementById('success');
-    const enableJapaneseSummary = document.getElementById('enableJapaneseSummary').checked;
+    
+    // 監視キーワード用の日本語要約設定を使用
+    const enableJapaneseSummary = userSettings.watchKeywordJapaneseSummary;
 
     try {
         // UI要素の初期化
@@ -377,7 +435,7 @@ async function checkNewPapers() {
         successEl.classList.add('d-none');
         resultsEl.innerHTML = '';
 
-        const response = await fetch('/api/new-papers');
+        const response = await fetch(`/api/new-papers?use_japanese_summary=${enableJapaneseSummary}`);
         const data = await response.json();
 
         if (data.status === 'error') {
@@ -396,11 +454,12 @@ async function checkNewPapers() {
         // バックエンドの結果をそのまま表示
         if (data.grouped_papers && Object.keys(data.grouped_papers).length > 0) {
             // グループ化されたデータをそのまま表示
-            displayResults(null, data.grouped_papers, enableJapaneseSummary);
+            currentGroupedPapers = data.grouped_papers;
+            displayResults(null, currentGroupedPapers, enableJapaneseSummary);
             
             // ソート機能のために論文データをcurrentResultsに格納
             currentResults = [];
-            Object.values(data.grouped_papers).forEach(keywordGroups => {
+            Object.values(currentGroupedPapers).forEach(keywordGroups => {
                 Object.values(keywordGroups).forEach(papers => {
                     currentResults = currentResults.concat(papers);
                 });
