@@ -57,6 +57,14 @@
                                     <input type="date" id="fromDate" class="form-control">
                                     <small class="form-text text-muted">この日付以降に公開された論文を検索します</small>
                                 </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">日本語要約</label>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="enableJapaneseSummary" checked>
+                                        <label class="form-check-label" for="enableJapaneseSummary">日本語要約を有効にする</label>
+                                    </div>
+                                    <small class="form-text text-muted">オフにすると日本語要約が表示されません</small>
+                                </div>
                             </div>
                             <h5 class="card-title mb-3">カテゴリーフィルター</h5>
                             <div id="categoryFilters" class="row">
@@ -67,6 +75,8 @@
                 </form>
             </div>
         </div>
+
+        <!-- 重複フォーム削除：ここに id="search-form" のフォームが存在していました -->
 
         <div class="watched-keywords-section card mb-4">
             <div class="card-body">

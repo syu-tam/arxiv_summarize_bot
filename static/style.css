@@ -25,8 +25,23 @@
 
 .paper-title {
     color: #2c3e50;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 1.4rem;
+}
+
+.paper-title-ja {
+    color: #495057;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+    border-left: 3px solid #007bff; /* 青色のボーダーに変更 */
+    padding-left: 0.8rem;
+    line-height: 1.4;
+    display: block !important; /* 必ず表示されるように */
+    margin-top: 0.5rem;
+    background-color: #f8f9fa; /* 背景色を追加して目立たせる */
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
 }
 
 .paper-meta {

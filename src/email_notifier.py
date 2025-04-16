@@ -1,15 +1,16 @@
 from typing import List, Dict, Any
 from datetime import datetime
 import os
-from loguru import logger
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import aiosmtplib
 from pydantic import BaseModel, EmailStr
 from pathlib import Path
 import json
+from .utils import setup_logger, ConfigManager
 
-logger.add("logs/email_notifier.log", rotation="500 MB")
+# 共通ロギング設定を使用
+logger = setup_logger("email_notifier")
 
 class EmailConfig(BaseModel):
     smtp_server: str
@@ -21,22 +22,17 @@ class EmailConfig(BaseModel):
 
 class EmailNotifier:
     def __init__(self):
-        self.config_file = Path("data/email_config.json")
+        self.config_file = "data/email_config.json"
         self.config = self._load_config()
 
     def _load_config(self) -> EmailConfig:
         """メール設定を読み込む"""
-        if self.config_file.exists():
-            with open(self.config_file, 'r', encoding='utf-8') as f:
-                config_data = json.load(f)
-                return EmailConfig(**config_data)
-        return None
+        config_data = ConfigManager.load_json(self.config_file)
+        return EmailConfig(**config_data) if config_data else None
 
     def save_config(self, config: Dict[str, Any]):
         """メール設定を保存"""
-        self.config_file.parent.mkdir(parents=True, exist_ok=True)
-        with open(self.config_file, 'w', encoding='utf-8') as f:
-            json.dump(config, f, ensure_ascii=False, indent=2)
+        ConfigManager.save_json(self.config_file, config)
         self.config = EmailConfig(**config)
 
     async def send_notification(self, papers: List[Dict[str, Any]]):
@@ -74,6 +70,7 @@ class EmailNotifier:
                     html_content += f"""
                     <div class="paper">
                         <div class="title">{paper['title']}</div>
+                        {f'<div class="title-ja">{paper["title_ja"]}</div>' if 'title_ja' in paper and paper['title_ja'] != paper['title'] else ''}
                         <div class="meta">
                             著者: {', '.join(paper['authors'])}<br>
                             カテゴリー: {paper['primary_category']}

@@ -54,6 +54,7 @@ async function searchPapers() {
     const maxResults = document.getElementById('maxResults').value;
     const selectedCategories = getSelectedCategories();
     const fromDate = document.getElementById('fromDate').value; // 日付フィールドから値を取得
+    const enableJapaneseSummary = document.getElementById('enableJapaneseSummary').checked; // 日本語要約のオン/オフ状態を取得
     const loadingEl = document.getElementById('loading');
     const errorEl = document.getElementById('error');
     const resultsEl = document.getElementById('results');
@@ -76,11 +77,11 @@ async function searchPapers() {
         
         // 日付指定がある場合は日付検索APIを使用
         if (fromDate) {
-            url = `/api/search_by_date?query=${encodeURIComponent(query)}&from_date=${fromDate}&max_results=${maxResults}`;
+            url = `/api/search_by_date?query=${encodeURIComponent(query)}&from_date=${fromDate}&max_results=${maxResults}&use_japanese_summary=${enableJapaneseSummary}`;
         } else {
             // カテゴリーパラメータの構築
             const categoryParams = selectedCategories.map(cat => `categories=${encodeURIComponent(cat)}`).join('&');
-            url = `/api/search?query=${encodeURIComponent(query)}&max_results=${maxResults}${categoryParams ? '&' + categoryParams : ''}`;
+            url = `/api/search?query=${encodeURIComponent(query)}&max_results=${maxResults}${categoryParams ? '&' + categoryParams : ''}&use_japanese_summary=${enableJapaneseSummary}`;
         }
         
         const response = await fetch(url);
@@ -101,7 +102,7 @@ async function searchPapers() {
             resultCountText += ` (${fromDate}以降の論文)`;
         }
 
-        displayResults(currentResults);
+        displayResults(currentResults, null, enableJapaneseSummary);
         document.querySelector('.results-count').textContent = resultCountText;
         resultsSectionEl.classList.remove('d-none');
 
@@ -113,7 +114,7 @@ async function searchPapers() {
 }
 
 // 結果表示部分の実装
-function displayResults(papers, groupedPapers = null) {
+function displayResults(papers, groupedPapers = null, enableJapaneseSummary = true) {
     const resultsEl = document.getElementById('results');
     resultsEl.innerHTML = '';
     
@@ -124,6 +125,7 @@ function displayResults(papers, groupedPapers = null) {
 
     // グループ化されたデータがある場合（新着チェック時）
     if (groupedPapers && Object.keys(groupedPapers).length > 0) {
+        // バックエンドから返されたグループ化データをそのまま表示
         Object.entries(groupedPapers).forEach(([date, keywordGroups], dateIndex) => {
             const dateSection = document.createElement('div');
             dateSection.className = 'date-section';
@@ -150,7 +152,7 @@ function displayResults(papers, groupedPapers = null) {
                             </div>
                             <div class="keyword-content" id="keyword-content-${dateIndex}-${keywordIndex}">
                                 <div class="papers-group">
-                                    ${keywordPapers.map(paper => createPaperCard(paper)).join('')}
+                                    ${keywordPapers.map(paper => createPaperCard(paper, enableJapaneseSummary)).join('')}
                                 </div>
                             </div>
                         </div>
@@ -179,11 +181,11 @@ function displayResults(papers, groupedPapers = null) {
         return;
     }
 
-    // 通常の検索結果の表示（従来の表示方法）
+    // 通常の検索結果の表示（バックエンドから返された結果をそのまま表示）
     papers.forEach(paper => {
         const paperEl = document.createElement('div');
         paperEl.className = 'paper-card';
-        paperEl.innerHTML = createPaperCard(paper);
+        paperEl.innerHTML = createPaperCard(paper, enableJapaneseSummary);
         resultsEl.appendChild(paperEl);
     });
 }
@@ -204,10 +206,17 @@ function toggleKeywordSection(dateIndex, keywordIndex) {
     header.classList.toggle('active');
 }
 
-function createPaperCard(paper) {
+function createPaperCard(paper, enableJapaneseSummary = true) {
+    // URLのフォールバック処理を追加
+    const arxivUrl = paper.url || paper.pdf_url.replace('/pdf/', '/abs/');
+    const pdfUrl = paper.pdf_url || arxivUrl.replace('/abs/', '/pdf/');
+    
     return `
         <div class="paper-card">
             <h2 class="paper-title">${paper.title}</h2>
+            ${enableJapaneseSummary && paper.title_ja ? `
+            <h3 class="paper-title-ja">${paper.title_ja}</h3>
+            ` : ''}
             <div class="paper-meta">
                 <div class="meta-item">
                     <i class="bi bi-people"></i>
@@ -222,33 +231,46 @@ function createPaperCard(paper) {
                     ${new Date(paper.published).toLocaleDateString('ja-JP')}
                 </div>
             </div>
+            ${enableJapaneseSummary && paper.summary_ja ? `
             <div class="paper-summary">
                 <h3 class="h5 mb-3">日本語要約:</h3>
                 <p>${paper.summary_ja}</p>
             </div>
-            <div class="paper-link">
-                <a href="${paper.pdf_url}" class="btn btn-outline-primary" target="_blank">
-                    <i class="bi bi-file-pdf"></i>
-                    PDFを開く
+            ` : ''}
+            <div class="paper-links">
+                <a href="${pdfUrl}" target="_blank" class="btn btn-sm btn-primary">
+                    <i class="bi bi-file-earmark-pdf"></i> PDF
+                </a>
+                <a href="${arxivUrl}" target="_blank" class="btn btn-sm btn-secondary">
+                    <i class="bi bi-link-45deg"></i> arXiv
                 </a>
             </div>
         </div>
     `;
 }
 
+// ソート機能を実装
 function sortResults(criterion) {
-    if (!currentResults.length) return;
-
-    switch (criterion) {
-        case 'date':
+    if (!currentResults || currentResults.length === 0) return;
+    
+    // ソートの基準に応じて並び替え
+    switch(criterion) {
+        case 'date-desc':
             currentResults.sort((a, b) => new Date(b.published) - new Date(a.published));
             break;
-        case 'title':
+        case 'date-asc':
+            currentResults.sort((a, b) => new Date(a.published) - new Date(b.published));
+            break;
+        case 'title-asc':
             currentResults.sort((a, b) => a.title.localeCompare(b.title));
             break;
+        case 'title-desc':
+            currentResults.sort((a, b) => b.title.localeCompare(a.title));
+            break;
     }
-
-    displayResults(currentResults);
+    
+    // ソートされた結果を表示（フィルタリングなし）
+    displayResults(currentResults, null, document.getElementById('enableJapaneseSummary').checked);
 }
 
 function showError(message) {
@@ -345,6 +367,7 @@ async function checkNewPapers() {
     const resultsSectionEl = document.getElementById('results-section');
     const resultsEl = document.getElementById('results');
     const successEl = document.getElementById('success');
+    const enableJapaneseSummary = document.getElementById('enableJapaneseSummary').checked;
 
     try {
         // UI要素の初期化
@@ -361,35 +384,46 @@ async function checkNewPapers() {
             throw new Error(data.message || '新着論文の取得に失敗しました');
         }
 
+        // 論文が存在するか確認
+        const hasPapers = data.papers && Object.keys(data.papers).length > 0;
+
         // 新着論文がない場合
-        if (!data.papers || data.papers.length === 0) {
+        if (!hasPapers) {
             showSuccess('新しい論文は見つかりませんでした');
             return;
         }
 
-        // 監視キーワードに一致する論文を表示
+        // バックエンドの結果をそのまま表示
         if (data.grouped_papers && Object.keys(data.grouped_papers).length > 0) {
-            displayResults(null, data.grouped_papers);
+            // グループ化されたデータをそのまま表示
+            displayResults(null, data.grouped_papers, enableJapaneseSummary);
             
-            // キーワードで絞り込まれた論文数をカウント
-            let filteredCount = 0;
+            // ソート機能のために論文データをcurrentResultsに格納
+            currentResults = [];
             Object.values(data.grouped_papers).forEach(keywordGroups => {
                 Object.values(keywordGroups).forEach(papers => {
-                    filteredCount += papers.length;
+                    currentResults = currentResults.concat(papers);
                 });
             });
             
-            // 全体の論文数と表示されている論文数を表示
-            let resultCountText = `${data.papers.length}件の新着論文が見つかりました`;
-            if (filteredCount < data.papers.length) {
-                resultCountText += `（そのうち${filteredCount}件が監視キーワードに一致し表示されています）`;
-            }
-            document.querySelector('.results-count').textContent = resultCountText;
-        } else {
-            // 監視キーワードに一致する論文がない場合は、全ての論文をそのまま表示
-            displayResults(data.papers);
-            document.querySelector('.results-count').textContent = 
-                `${data.papers.length}件の新着論文が見つかりました`;
+            // キーワードで絞り込まれた論文数をカウント
+            let filteredCount = currentResults.length;
+            document.querySelector('.results-count').textContent = `${filteredCount}件の論文が見つかりました`;
+        } else if (data.papers && Object.keys(data.papers).length > 0) {
+            // バックエンドから返された論文をそのまま表示
+            const allPapers = [];
+            Object.entries(data.papers).forEach(([keyword, paperList]) => {
+                paperList.forEach(paper => {
+                    paper.matched_keyword = keyword;
+                    allPapers.push(paper);
+                });
+            });
+            
+            // currentResultsを更新
+            currentResults = allPapers;
+            
+            displayResults(allPapers, null, enableJapaneseSummary);
+            document.querySelector('.results-count').textContent = `${allPapers.length}件の論文が見つかりました`;
         }
         
         resultsSectionEl.classList.remove('d-none');
